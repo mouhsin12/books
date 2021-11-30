@@ -1,0 +1,871 @@
+
+<!DOCTYPE html>
+<html>
+  <meta  charset="utf-8">
+<title>احس الكتب </title>
+<style>
+ 
+
+.filterDiv {
+  float:left;
+    line-height: 50px;
+  text-align: center;
+  display: none;
+
+                                       margin: 0px;
+                                      padding: 0px;
+ 
+
+}
+div.filterDiv{
+
+ margin: 7px;
+  border: 1px solid  #ccc;
+  float: left;
+  width: 180px;
+}
+div.filterDiv cars{
+    display: flex;
+  flex-direction: row-reverse;
+
+
+}
+div.filterDiv img{
+    width:180px;
+  height: auto;
+  height: 200px;
+ border-style:  solid   ;
+}
+div.desc {
+font-size: 17px;
+   text-align: center;
+ border:  1px solid red   ;
+ color: black; 
+ background-color: black;
+ color: yellow;
+
+ 
+}
+div.desc:hover{
+  background-color:  aqua;
+  color:black;
+}
+
+.show {
+  display: block;
+}
+
+.container {
+  margin-top: 20px;
+  overflow: hidden;
+
+                                       margin: 0px;
+                                      padding: 2px;
+ 
+
+   }
+
+ 
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  font-size: 18px;
+  padding: 12px 16px;
+  border: 2px solid black;
+  background-color:black;
+  cursor: pointer;
+  color: yellow;
+  }
+
+.btn:hover {
+  background-color:red;
+}
+
+.btn.active {
+  background-color:red;
+  color: white;
+}
+.btn1{ margin: 2px;
+      padding: -10px;
+      background-color: black;
+      color: yellow;
+      font-size: 15px ;}
+
+.btn1:hover{
+    background-color: red;
+}
+
+ 
+ 
+  h2{        
+                    background-image: url(' gggg.jfif');
+                     height: 90vh;
+                     background-size: cover;
+                 background-position: right;
+                                        font-size:180px;
+                                      color:lime;
+                                      margin: 0px;
+                                      padding: 0px;
+                                      text-align: center;
+                                      background-repeat: no-repeat;
+           
+ }
+
+ 
+
+
+
+       
+         
+ h2:hover{
+  color: red;
+
+
+ }
+
+  
+ 
+.dropbtn {
+  background-color:white;
+  color: black;
+  width: 1030px ;
+  text-align: center;
+  padding: 16px;
+   font-size: 50px;
+   cursor: pointer;
+  border: 3px solid aqua;
+  }
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #3e8e41;
+}
+
+#myInput {
+  box-sizing: border-box;
+  background-image: url('searchicon.png');
+  background-position: 14px 12px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  padding: 14px 20px 12px 45px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+
+#myInput:focus {outline: 3px solid #ddd;}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f6f6f6;
+  min-width: 230px;
+  overflow: auto;
+  border: 1px solid #ddd;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+
+button{
+    margin: -1px;
+ width: 110px;
+height: 60px;}
+</style>
+<body>
+           
+
+<h2 >    تعلم كيف تواجه واقع الحياة     </h2>  
+
+
+<!--  <div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">... ابحث  </button>
+  <div id="myDropdown" class="dropdown-content">
+    <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+    <a href="#about">About</a>
+    <a href="#base">Base</a>
+    <a href="#blog">Blog</a>
+    <a href="#contact">Contact</a>
+    <a href="#custom">Custom</a>
+    <a href="#support">Support</a>
+    <a href="#tools">Tools</a>
+  </div>
+</div> 
+--> 
+ <hr>
+<div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')"> كل الكتب</button>
+  <button class="btn" onclick="filterSelection('cars')"> علم النفس </button>
+  <button class="btn" onclick="filterSelection('animals')"> الكاريزما</button>
+  <button class="btn" onclick="filterSelection('fruits')"> لغة الجسد</button>
+  <button class="btn" onclick="filterSelection('colors')">  الضحك </button>
+  <button class="btn" onclick="filterSelection('me')">الحب</button>
+  <button class="btn" onclick="filterSelection('sisters')">   ابراهيم الفقي</button>
+  <button class="btn" onclick="filterSelection('dad')"> كيف تنجح </button>
+<button class="btn1" onclick="filterSelection('mom')">اللغة الانجلزية </button>
+
+</div>
+
+<div class="container">
+
+    
+
+   <div class="filterDiv cars">
+
+               <a href=" علم النفس/أسس علم النفس.pdf" download target="blank">
+              <img src="علم النفس/1.jpg" width="104" height="142">
+              </a>
+                 <div class="desc">  أسس علم النفس</div>
+   </div>
+   <div class="filterDiv cars">
+
+               <a href=" علم النفس/أسس_علم_النفس_العام.pdf" download target="blank">
+              <img src=" علم النفس/2.jpg "  width="104" height="142">
+              </a>
+                 <div class="desc">  أسس_علم_النفس_العام </div>
+ 
+   </div>
+
+        
+    <div class="filterDiv cars">
+
+                          <a href=" علم النفس/الثقة والاعتزاز بالنفس.pdf " download target="blank">
+                          <img src=" علم النفس/3.jpg  "  width="104" height="142">
+                          </a>
+                          <div class="desc">الثقة والاعتزاز بالنفس </div> 
+   </div>
+                          
+    <div class="filterDiv cars">
+
+                   <a   href="علم النفس/الوجودية.pdf " download target="blank">
+                   <img src="  علم النفس/4.jpg "   width="600" height="400"  >
+                   </a>
+                   <div class="desc"> الوجودية </div>
+   </div>
+   <div class="filterDiv cars"> 
+
+                   <a   href=" علم النفس/بناء الثقة بالنفس.pdf " download target="blank" >
+                  <img src="علم النفس/5.jpg "   width="600" height="400">
+                  </a>
+                   <div class="desc"> بناء الثقة بالنفس  </div>
+   </div>
+
+
+   <div class="filterDiv cars"> 
+
+                   <a   href="  علم النفس/تعزيز تقدير الذات.pdf " download target="blank">
+                  <img src=" علم النفس/6.jpg "   width="600" height="400">
+                  </a>
+                   <div class="desc"> تعزيز تقدير الذات   </div>
+   </div>
+   <div class="filterDiv cars"> 
+
+                   <a   href=" علم النفس/رسالة من مجهولة.pdf " download target="blank">
+                  <img src="علم النفس/7.jpg "   width="600" height="400">
+                  </a>
+                   <div class="desc">  رسالة من مجهولة </div>
+   </div>
+   <div class="filterDiv cars"> 
+
+                   <a   href=" علم النفس/سحر_الكلمة.pdf" download target="blank">
+                  <img src=" علم النفس/8.jpg "   width="600" height="400">
+                  </a>
+                   <div class="desc"> سحر_الكلمة</div>
+   </div>
+   <div class="filterDiv cars"> 
+
+                   <a   href="علم النفس/علم نفس الشخصية.pdf" download target="blank">
+                  <img src="  علم النفس/9.jpg "   width="600" height="400">
+                  </a>
+                   <div class="desc">   علم نفس الشخصية </div>
+   </div>
+   <div class="filterDiv cars"> 
+
+                   <a   href="  علم النفس/علم نفس الشخصية.pdf  "download target="blank">
+                  <img src="علم النفس/10.jpg "   width="600" height="400">
+                  </a>
+                   <div class="desc"> اهم 50 كتاب في علم النفس  </div>
+
+   </div>
+         <!-- ------------------------------------------------------------------------------- -->
+   
+    
+  <div class="filterDiv dad"> 
+
+            <a   href=" كيف تنجح/التلفزيون_وآليات_التلاعب.pdf " download target="blank" >
+            <img src="كيف تنجح/a.jpg"   width="600" height="400">
+            </a>
+ <div class="desc">  التلفزيون_وآليات_التلاعب</div>
+   </div>
+
+
+ <div class="filterDiv dad "> 
+
+            <a   href=" كيف تنجح/الطريق الى النجاح.pdf " download target="blank" >
+            <img src="كيف تنجح/b.jpg"   width="600" height="400">
+            </a>
+ <div class="desc"> الطريق الى النجاح </div>
+   </div>
+
+
+ <div class="filterDiv dad "> 
+
+            <a   href=" كيف تنجح/العادات السبع للناس الأكثر فعالية.pdf" download target="blank" >
+            <img src="كيف تنجح/c.jpg"   width="600" height="400">
+            </a>
+ <div class="desc"> العادات السبع للناس الأكثر فعالية </div>
+   </div>
+
+
+ <div class="filterDiv dad"> 
+
+            <a   href="كيف تنجح/المفاتيح العشرة للنجاح.pdf" download target="blank" >
+            <img src="كيف تنجح/d.jpg"   width="600" height="400">
+            </a>
+ <div class="desc"> المفاتيح العشرة للنجاح</div>
+   </div>
+
+
+ <div class="filterDiv dad"> 
+
+            <a   href="  كيف تنجح/حياة بلا توتر.pdf" download target="blank" >
+            <img src="كيف تنجح/e.jpg"   width="600" height="400">
+            </a>
+ <div class="desc"> حياة بلا توتر </div>
+   </div>
+
+
+ <div class="filterDiv dad"> 
+
+            <a   href=" كيف تنجح/دليل_الباحثين_في_الإدارة.pdf" download target="blank" >
+            <img src="كيف تنجح/f.jpg"   width="600" height="400">
+            </a>
+ <div class="desc"> دليل_الباحثين_في_الإدارة </div>
+   </div>
+
+
+ <div class="filterDiv dad "> 
+
+            <a   href=" كيف تنجح/قوة الانضباط.pdf" download target="blank" >
+            <img src="كيف تنجح/g.jpg"   width="600" height="400">
+            </a>
+ <div class="desc"> قوة الانضباط </div>
+   </div>
+
+    <div class="filterDiv dad "> 
+
+            <a   href=" كيف تنجح/نظرية الفستق.pdf" download target="blank" >
+            <img src="كيف تنجح/h.jpg"   width="600" height="400">
+            </a>
+ <div class="desc"> نظرية الفستق</div>
+   </div>
+   <!-- ------------------------------------------------------------------------------- -->
+  
+         <div class="filterDiv me"> 
+
+                   <a   href=" الحب/أشجار الحب - سلسلة زهور.pdf " download target="blank" >
+                  <img src="الحب/1.jpg"   width="600" height="400">
+                  </a>
+                   <div class="desc">أشجار الحب - سلسلة زهور</div>
+   </div> 
+
+    <div class="filterDiv me"> 
+
+                   <a   href=" الحب/حب بعد عذاب.pdf " download target="blank" >
+                  <img src="الحب/2.jpg"   width="600" height="400">
+                  </a>
+                   <div class="desc"> حب بعد عذاب</div>
+   </div> 
+
+    <div class="filterDiv me"> 
+
+                   <a   href=" الحب/خارطة الحب.pdf" download target="blank" >
+                  <img src="الحب/3.jpg"   width="600" height="400">
+                  </a>
+                   <div class="desc"> خارطة الحب</div>
+   </div> 
+
+    <div class="filterDiv me"> 
+
+                   <a   href=" الحب/عن شيء اسمه الحب.pdf " download target="blank" >
+                  <img src="الحب/4.jpg"   width="600" height="400">
+                  </a>
+                   <div class="desc">عن شيء اسمه الحب </div>
+   </div> 
+
+    <div class="filterDiv me"> 
+
+                   <a   href=" الحب/قوة الحب والتسامح.pdf " download target="blank" >
+                  <img src="الحب/5.jpg"   width="600" height="400">
+                  </a>
+                   <div class="desc"> قوة الحب والتسامح</div>
+   </div> 
+
+    <div class="filterDiv me"> 
+
+                   <a   href=" الحب/لغات الحب الخمس.pdf " download target="blank" >
+                  <img src="الحب/6.jpg"   width="600" height="400">
+                  </a>
+                   <div class="desc"> لغات الحب الخمس</div>
+   </div> 
+           
+        
+
+
+         
+ 
+    <!-- ------------------------------------------------------------------------------- -->
+ 
+<div class="filterDiv sisters"> 
+
+            <a   href=" إبراهيم الفقي/إدارة الوقت.pdf" download target="blank" >
+            <img src="إبراهيم الفقي/1.jpg"   width="600" height="400">
+            </a>
+ <div class="desc"> إدارة الوقت </div>
+   </div> 
+
+    
+
+    <div class="filterDiv sisters"> 
+
+            <a   href=" إبراهيم الفقي/الأب الغني والأب الفقير.pdf" download target="blank" >
+            <img src="إبراهيم الفقي/2.jpg"   width="600" height="400">
+            </a>
+ <div class="desc"> الأب الغني والأب الفقير </div>
+   </div>  
+
+    
+
+    <div class="filterDiv sisters"> 
+
+            <a   href=" إبراهيم الفقي/الانتحار.pdf" download target="blank" >
+            <img src="إبراهيم الفقي/3.jpg"   width="600" height="400">
+            </a>
+ <div class="desc"> الانتحار </div>
+   </div>  
+
+
+<div class="filterDiv sisters"> 
+
+            <a   href=" إبراهيم الفقي/أيقظ قدراتك واصنع مستقبلك.pdf " download target="blank" >
+            <img src="إبراهيم الفقي/4.jpg"   width="600" height="400">
+            </a>
+ <div class="desc"> أيقظ قدراتك واصنع مستقبلك </div>
+   </div>  
+
+
+    <div class="filterDiv sisters"> 
+
+            <a   href=" إبراهيم الفقي/غير حياتك فى 30 يوما.pdf" download target="blank" >
+            <img src="إبراهيم الفقي/5.jpg"   width="600" height="400">
+            </a>
+ <div class="desc"> غير حياتك فى 30 يوما </div>
+   </div>  
+
+    <div class="filterDiv sisters"> 
+
+            <a   href=" إبراهيم الفقي/قوة التحكم في الذات.pdf " download target="blank" >
+            <img src="إبراهيم الفقي/6.jpg"   width="600" height="400">
+            </a>
+ <div class="desc"> قوة التحكم في الذات </div>
+   </div>  
+
+    <div class="filterDiv sisters"> 
+
+            <a   href=" إبراهيم الفقي/قوة التفكير.pdf " download target="blank" >
+            <img src="إبراهيم الفقي/7.jpg"   width="600" height="400">
+            </a>
+ <div class="desc"> قوة التفكير </div>
+   </div>  
+
+    <div class="filterDiv sisters"> 
+
+            <a   href=" إبراهيم الفقي/كن يقظا.pdf " download target="blank" >
+            <img src="إبراهيم الفقي/8.jpg"   width="600" height="400">
+            </a>
+ <div class="desc"> كن يقظا </div>
+   </div>  
+
+    <div class="filterDiv sisters"> 
+
+            <a   href=" إبراهيم الفقي/مافوق مبدأ اللذة.pdf " download target="blank" >
+            <img src="إبراهيم الفقي/9.jpg"   width="600" height="400">
+            </a>
+ <div class="desc"> مافوق مبدأ اللذة </div>
+   </div>  
+
+         
+   <!-- ------------------------------------------------------------------------------- -->
+
+
+     <div  class="filterDiv animals">
+
+                <a href="كاريزما/الشخصية الساحرة.pdf"download target="blank">
+                <img src="كاريزما/a.jpg  "   width="600" height="142">
+                </a>
+            <div class="desc">ا لشخصية الساحرة<  </div>
+ 
+   </div>
+    <div  class="filterDiv animals">
+
+                <a href=" كاريزما/الفوز.pdf " download target="blank">
+                <img src="  كاريزما/b.jpg "  width="104" height="142">
+                </a>
+            <div class="desc"> الفوز</div>
+ 
+   </div>
+     <div  class="filterDiv animals">
+
+                <a href="كاريزما/الكاريزما في العين.pdf " download target="blank">
+                <img src="  كاريزما/c.jpg "  width="104" height="142">
+                </a>
+            <div class="desc">الكاريزما في العين</div>
+ 
+   </div>
+     <div  class="filterDiv animals">
+
+                <a href=" كاريزما/الكاريزما.pdf   " download target="blank">
+                <img src="كاريزما/d.jpg"  width="104" height="142">
+                 </a>
+             <div class="desc"> الكاريزما</div>
+ 
+   </div>
+    
+     <div  class="filterDiv animals">
+               
+               <a href=" كاريزما/قوانين الكاريزما..pdf" download target="blank">
+                 <img src=" كاريزما/e.jpg "  width="104" height="142">
+                </a>
+            <div class="desc"> قوانين الكاريزما</div>
+ 
+   </div>
+     <div  class="filterDiv animals">
+
+                <a href="كاريزما/قوة الاقناع..pdf" download target="blank">
+                <img src=" كاريزما/f.jpg "  width="104" height="142">
+                </a>
+            <div class="desc">قوة الاقناع</div>
+ 
+   </div>
+     <div  class="filterDiv animals">
+
+                <a href=" كاريزما/كيف تطلق قواك..pdf" download target="blank">
+                <img src="  كاريزما/g.jpg "  width="104" height="142">
+                </a>
+            <div class="desc">كيف تطلق قواك</div>
+ 
+   </div>
+     <div  class="filterDiv animals">
+
+                <a href="كاريزما/كيف تكون ناجح..pdf " download target="blank">
+                <img src="  كاريزما/h.jpg "  width="104" height="142">
+                </a>
+            <div class="desc">كيف تكون ناجح</div>
+ 
+   </div>
+   <div  class="filterDiv animals">
+
+                <a href=" كاريزما/مهارة القائد..pdf " download target="blank">
+                <img src=" كاريزما/i.jpg"  width="104" height="142">
+                </a>
+            <div class="desc">م00هارة القائد</div>
+ 
+   </div>
+
+   <!-- ------------------------------------------------------------------------------- -->
+
+ <div class="filterDiv mom "> 
+
+            <a   href="https://www.youtube.com/watch?v=77IK9T45kiU" target="blank" >
+            <img src="اللغة الانجلزية/0.jfif"   width="600" height="400">
+            </a>
+ <div class="desc"> تعلم اللغة الانجلزية </div>
+   </div>
+
+   <div class="filterDiv mom "> 
+
+            <a   href=" https://www.youtube.com/watch?v=39Lvn86ZAl0&t=3s"target="blank" >
+            <img src="اللغة الانجلزية/1.jfif"   width="600" height="400">
+            </a>
+ <div class="desc"> الحصول على الكاريزما</div>
+   </div>
+
+   <div class="filterDiv mom "> 
+
+            <a   href= "https://www.youtube.com/watch?v=E5aefM0_Ot8&list=PLCLU5I9UxamPYGVscL_RtjmZMDaVwKunO" target="blank" >
+            <img src="اللغة الانجلزية/2.jfif"   width="600" height="400">
+            </a>
+ <div class="desc"> الكاريزما  </div>
+   </div>
+
+   <div class="filterDiv mom "> 
+
+            <a   href="https://www.youtube.com/watch?v=BliDUlParaQ&list=PLxCFn5-t8kLV0EHkQk1GqR62_XvoSaFmT&index=3" target="blank" >
+            <img src="اللغة الانجلزية/3.jfif"   width="600" height="400">
+            </a>
+ <div class="desc"> تعلم اللغة الفرنسية</div>
+   </div>
+      <!-- ------------------------------------------------------------------------------- -->
+     
+   <!-- ------------------------------------------------------------------------------- -->
+  
+    <div class="filterDiv   fruits"> 
+
+                <a href=" لغة الجسد/أسرار الوجه - الطريقة الصينية.pdf " download target="blank" >
+                <img src="لغة الجسد/1.jpg "  width="104" height="142" >
+                </a>
+                       <div class="desc"> أسرار الوجه - الطريقة الصينية</div>
+
+    </div>
+    <div class="filterDiv   fruits"> 
+
+                <a href=" لغة الجسد/الصمت.pdf" download target="blank" >
+                <img src="لغة الجسد/2.jpg "  width="104" height="142" >
+                </a>
+                       <div class="desc"> الصمت</div>
+
+   </div>
+
+   <div class="filterDiv   fruits"> 
+
+                <a href=" لغة الجسد/المحامي الوغد.pdf " download target="blank" >
+                <img src=" لغة الجسد/3.jpg "  width="104" height="142" >
+                </a>
+                       <div class="desc"> المحامي الوغد</div>
+
+    </div>
+    <div class="filterDiv   fruits"> 
+
+                <a href=" لغة الجسد/المرجع الأكيد في لغة الجسد.pdf " download target="blank" >
+                <img src=" لغة الجسد/4.jpg "  width="104" height="142" >
+                </a>
+                       <div class="desc"> المرجع الأكيد في لغة الجسد</div>
+
+   </div>
+
+    
+    <div class="filterDiv   fruits"> 
+
+                <a href="لغة الجسد/المعاني الخفية لحركات الجسد.pdf" download target="blank" >
+                <img src="لغة الجسد/5.jpg "  width="104" height="142" >
+                </a>
+                       <div class="desc"> المعاني الخفية لحركات الجسد</div>
+
+   </div>
+
+    <div class="filterDiv   fruits"> 
+
+                <a href="  لغة الجسد/فن التعامل مع الناس..pdf" download target="blank" >
+                <img src="لغة الجسد/6.jpg "  width="104" height="142" >
+                </a>
+                       <div class="desc">  فن التعامل مع الناس</div>
+
+   </div>
+   <div class="filterDiv   fruits"> 
+
+                <a href=" لغة الجسد/كيف تقرأ  أفكار الآخرين من خلال حركاتهم.pdf  " download target="blank" >
+                <img src="لغة الجسد/7.jpg "  width="104" height="142" >
+                </a>
+                       <div class="desc">كيف تقرأ أفكار الآخرين</div>
+
+   </div>
+    
+   <div class="filterDiv   fruits"> 
+
+                <a href=" لغة الجسد/كيف تكسب الأصدقاء وتؤثر في الناس..pdf " download target="blank" >
+                <img src="لغة الجسد/8.jpg "  width="104" height="142" >
+                </a>
+                       <div class="desc">كيف تكسب الأصدقاء</div>
+
+   </div>
+
+   <div class="filterDiv   fruits"> 
+
+                <a href=" لغة الجسد/لغة الجسد النفسية..pdf" download target="blank" >
+                <img src=" لغة الجسد/9.jpg "  width="104" height="142" >
+                </a>
+                       <div class="desc"> لغة الجسد النفسية</div>
+
+   </div>
+
+   <div class="filterDiv   fruits"> 
+
+                <a href=" لغة الجسد/نظرات حول الإنسان.pdf" download target="blank" >
+                <img src=" لغة الجسد/10.jpg "  width="104" height="142" >
+                </a>
+                       <div class="desc">نظرات حول الإنسان</div>
+
+   </div>
+
+
+   <!-- ------------------------------------------------------------------------------- -->
+   <!-- ------------------------------------------------------------------------------- -->
+
+    <div class="filterDiv colors">
+
+               <a href="الضحك/الضحك بسبب.pdf" download>
+               <img src=" الضحك/1.jpg"  width="104" height="142">
+               </a>
+    <div class="desc"> الضحك بسبب</div>
+ 
+   </div>
+   
+     
+
+
+   
+    <div class="filterDiv colors">
+
+               <a href=" الضحك/جمهورية الضحك الأولى.pdf" download>
+               <img src=" الضحك/3.jpg"  width="104" height="142">
+               </a>
+    <div class="desc">  جمهورية الضحك الأولى</div>
+ 
+   </div>
+   
+    <div class="filterDiv colors">
+
+               <a href=" الضحك/ضحك مجروح.pdf" download>
+               <img src="الضحك/4.jpg "  width="104" height="142">
+               </a>
+    <div class="desc">ضحك مجروح</div>
+ 
+   </div>
+   
+    <div class="filterDiv colors">
+
+               <a href=" الضحك/قوة الثقة بالنفس.pdf" download>
+               <img src=" الضحك/5.jpg"  width="104" height="142">
+               </a>
+    <div class="desc">  قوة الثقة بالنفس</div>
+ 
+   </div>
+   
+    <div class="filterDiv colors">
+
+               <a href=" الضحك/كتاب الضحك والنسيان.pdf" download>
+               <img src="الضحك/6.jpg "  width="104" height="142">
+               </a>
+    <div class="desc">  كتاب الضحك والنسيان</div>
+ 
+   </div>
+
+   <div class="filterDiv colors">
+
+               <a href=" الضحك/لعلك تضحك.pdf" download>
+               <img src="الضحك/7.jpg "  width="104" height="142">
+               </a>
+    <div class="desc"> لعلك تضحك</div>
+ 
+   </div>
+   
+
+    <div class="filterDiv colors">
+
+               <a href="الضحك/الكبار يضحكون أيضاً.pdf " download>
+               <img src="الضحك/2.jpg "  width="104" height="142">
+               </a>
+    <div class="desc">    الكبار يضحكون أيضاً<div>
+ 
+   </div>
+
+  
+
+
+
+
+  
+  
+    <!-- ------------------------------------------------------------------------------- -->
+  
+
+                         
+   <!-- ------------------------------------------------------------------------------- -->
+
+ <script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("filterDiv ");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+ <!--  search-------------------------------------------------------------------------------- -->
+ 
+
+
+<script>
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+function filterFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  div = document.getElementById("myDropdown");
+  a = div.getElementsByTagName("a");
+  for (i = 0; i < a.length; i++) {
+    txtValue = a[i].textContent || a[i].innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      a[i].style.display = "";
+    } else {
+      a[i].style.display = "none";
+    }
+  }
+}
+</script>
+</body>
+</html>
